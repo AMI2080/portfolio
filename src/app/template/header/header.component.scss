@@ -1,0 +1,105 @@
+.app-nav-bar {
+  height: 4rem;
+  background-color: #222;
+  border-bottom: .05rem solid #fff;
+
+  .app-nav-bar-container {
+    max-width: 82.5rem;
+    margin: auto;
+    position: relative;
+
+    .logo-container {
+      span {
+        vertical-align: middle;
+        display: inline-block;
+        color: #fff;
+        font-size: 2rem;
+      }
+
+      .logo-img {
+        vertical-align: middle;
+        height: 3rem;
+        margin: .5rem;
+      }
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    .app-nav-bar-links {
+      float: right;
+
+      .app-nav-bar-link {
+        display: inline-block;
+        padding: 1rem 1rem;
+        margin: 0 .25rem;
+        height: 4rem;
+        font-size: 1.4rem;
+        color: #fff;
+        border-bottom: .1rem solid transparent;
+        text-decoration: none;
+      }
+
+      .app-nav-bar-link:hover:not(.active) {
+        background-color: #333;
+      }
+
+      .app-nav-bar-link.active,
+      .app-nav-bar-link:hover {
+        border-bottom-color: #12ffff;
+        color: #12ffff;
+      }
+
+      .app-nav-bar-link.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media(max-width: 50rem) {
+  .app-nav-bar {
+
+    .app-nav-bar-container {
+      .app-nav-bar-links {
+        display: none;
+      }
+
+      .app-nav-bar-links.show {
+        display: block;
+        width: calc(100% - 3rem);
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        .app-nav-bar-link {
+          display: block;
+          background-color: #222222ee;
+          width: 100%;
+          margin: 0;
+          text-align: center;
+        }
+
+        .app-nav-bar-link:hover:not(.active) {
+          background-color: #333333ee;
+        }
+
+        .app-nav-bar-link.active {
+          background-color: #222222;
+        }
+      }
+
+      .menu-btn {
+        display: inline;
+        cursor: pointer;
+        padding: 1rem 1rem;
+        margin: 0 .25rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        color: #fff;
+        float: right;
+      }
+    }
+  }
+}

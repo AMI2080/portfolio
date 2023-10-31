@@ -1,0 +1,11 @@
+.app-content {
+  background-color: #222;
+  color: #fff;
+  
+  .content-container {
+    max-width: 82.5rem;
+    margin: auto;
+    padding-top: 2rem;
+    min-height: calc(100vh - 4rem);
+  }
+}
