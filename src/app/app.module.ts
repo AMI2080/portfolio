@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SkilsComponent } from './pages/skills/skills.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+import { MultiStringsDirective } from './directives/multi-strings.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContactMeComponent } from './pages/contact-me/contact-me.component';
     ProjectsComponent,
     SkilsComponent,
     ContactMeComponent,
+    MultiStringsDirective,
   ],
   imports: [
     BrowserModule,

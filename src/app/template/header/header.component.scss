@@ -1,6 +1,6 @@
 .app-nav-bar {
   height: 4rem;
-  background-color: #222;
+  background-color: #223;
   border-bottom: .05rem solid #fff;
 
   .app-nav-bar-container {
@@ -32,10 +32,10 @@
 
       .app-nav-bar-link {
         display: inline-block;
-        padding: 1rem 1rem;
+        padding: 1.75rem .75rem;
         margin: 0 .25rem;
         height: 4rem;
-        font-size: 1.4rem;
+        font-size: .9rem;
         color: #fff;
         border-bottom: .1rem solid transparent;
         text-decoration: none;
@@ -75,18 +75,18 @@
 
         .app-nav-bar-link {
           display: block;
-          background-color: #222222ee;
+          background-color: #222233ee;
           width: 100%;
           margin: 0;
           text-align: center;
         }
 
         .app-nav-bar-link:hover:not(.active) {
-          background-color: #333333ee;
+          background-color: #333344ee;
         }
 
         .app-nav-bar-link.active {
-          background-color: #222222;
+          background-color: #222233;
         }
       }
 
