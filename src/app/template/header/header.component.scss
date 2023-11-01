@@ -1,7 +1,7 @@
 .app-nav-bar {
   height: 4rem;
   background-color: #223;
-  border-bottom: .05rem solid #fff;
+  // border-bottom: .05rem solid #fff;
 
   .app-nav-bar-container {
     max-width: 82.5rem;
@@ -72,6 +72,7 @@
         position: absolute;
         top: 100%;
         right: 0;
+        box-shadow: -3px 6px 6px #000;;
 
         .app-nav-bar-link {
           display: block;
