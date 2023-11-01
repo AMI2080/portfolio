@@ -13,14 +13,13 @@ export class MultiStringsDirective implements OnInit, OnDestroy {
 
   interval = setInterval(() => { }, 1000);
 
-  constructor(private elementRef: ElementRef) {
-
-  }
+  constructor(private elementRef: ElementRef) { }
 
   updateString() {
     if (this.strings.length === 0) {
       return;
     }
+
     if (this.duration === '+') {
       if (this.strings[this.currentIndex] === this.currentString) {
         this.duration = '-';
@@ -29,6 +28,7 @@ export class MultiStringsDirective implements OnInit, OnDestroy {
         this.currentString = this.strings[this.currentIndex].slice(0, this.currentPos);
       }
     }
+
     if (this.duration === '-') {
       if (this.currentString === '') {
         this.duration = '+';
@@ -38,10 +38,15 @@ export class MultiStringsDirective implements OnInit, OnDestroy {
         this.currentString = this.strings[this.currentIndex].slice(0, this.currentPos);
       }
     }
+
     this.elementRef.nativeElement.innerText = this.currentString + '|';
   }
 
   ngOnInit(): void {
+    if (this.elementRef.nativeElement.innerText !== '') {
+      this.strings = [this.elementRef.nativeElement.innerText, ...this.strings];
+    }
+
     this.interval = setInterval(() => {
       this.updateString();
     }, this.speed)
