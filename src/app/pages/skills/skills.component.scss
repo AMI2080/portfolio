@@ -1,8 +1,19 @@
 .skills-container {
-  min-height: calc(100vh - 4rem - 2rem - 2rem);
+  min-height: calc(100vh - 4rem - 3rem - 3rem);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .page-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    .high-light {
+      color: #12ffff;
+    }
+  }
 
   .skill-items {
     display: grid;
@@ -53,16 +64,17 @@
         display: none;
       }
     }
-    
+
     .skill-item:hover {
       background-color: #12ffff;
       cursor: default;
       color: #223;
       box-shadow: 0 0 .5rem 0 #12ffff;
-      
+
       img.skill-icon.color-ffffff {
         display: none;
       }
+
       img.skill-icon.color-222233 {
         display: block;
       }

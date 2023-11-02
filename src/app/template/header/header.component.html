@@ -5,8 +5,12 @@
       <span>Abdelrhman</span>
     </a>
     <div class="menu-btn" (click)="toggleLinks()">
-      <i class="fa-solid fa-bars" *ngIf="!this.showLinks"></i>
-      <i class="fa-solid fa-xmark" *ngIf="this.showLinks"></i>
+      <span *ngIf="!this.showLinks">
+        <i class="fa-solid fa-bars" ></i>
+      </span>
+      <span  *ngIf="this.showLinks">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
     </div>
     <div class="app-nav-bar-links" [ngClass]="{show: this.showLinks}" (click)="hideLinks()">
       <a class="app-nav-bar-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>

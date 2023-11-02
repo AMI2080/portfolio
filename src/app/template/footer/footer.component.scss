@@ -1,0 +1,21 @@
+.app-footer {
+  background-color: #223;
+  color: #fff;
+  border-top: .05rem solid #fff2;
+
+  .footer-container {
+    max-width: 82.5rem;
+    margin: auto;
+    height: 2.95rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    a,
+    a:visited {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

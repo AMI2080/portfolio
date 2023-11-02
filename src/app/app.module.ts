@@ -12,6 +12,7 @@ import { SkilsComponent } from './pages/skills/skills.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { MultiStringsDirective } from './directives/multi-strings.directive';
 import { ProjectComponent } from './pages/projects/project/project.component';
+import { FooterComponent } from './template/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProjectComponent } from './pages/projects/project/project.component';
     ContactMeComponent,
     MultiStringsDirective,
     ProjectComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
