@@ -1,0 +1,48 @@
+.contact-container {
+  min-height: calc(100vh - 4rem - 2rem - 2rem);
+  display: flex;
+  align-items: center;
+
+  .middle {
+    width: 100%;
+
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: .25rem;
+
+      .high-light {
+        color: #12ffff;
+      }
+    }
+
+    &>p {
+      text-align: center;
+      font-size: 1rem;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      width: 27rem;
+      height: 10rem;
+      margin: auto;
+    }
+
+    .contact-item {
+      font-size: 2rem;
+      margin-bottom: .5rem;
+
+      a,
+      a:visited {
+        .contact-icon {
+          margin-right: 1rem;
+        }
+
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
