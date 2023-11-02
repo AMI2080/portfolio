@@ -1,1 +1,21 @@
-<p>projects works!</p>
+<div class="projects-container">
+  <div class="middle">
+    <div class="page-title">latest <span class="high-light">Projects</span></div>
+    <div class="projects">
+      <div class="project" *ngFor="let project of projects; let index = index"
+        style="background-image: url('{{ project.imagePath }}')">
+        <div class="info">
+          <div class="title">{{ project.title }}</div>
+          <p class="description">{{ project.shortDescription }}</p>
+          <div class="footer">
+
+            <a [routerLink]="['/projects', index]" class="project-link">
+              Show more ...
+              <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

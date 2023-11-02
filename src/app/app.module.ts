@@ -11,6 +11,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { SkilsComponent } from './pages/skills/skills.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { MultiStringsDirective } from './directives/multi-strings.directive';
+import { ProjectComponent } from './pages/projects/project/project.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MultiStringsDirective } from './directives/multi-strings.directive';
     SkilsComponent,
     ContactMeComponent,
     MultiStringsDirective,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

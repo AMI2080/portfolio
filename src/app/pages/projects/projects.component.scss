@@ -1,0 +1,110 @@
+.projects-container {
+  min-height: calc(100vh - 4rem - 2rem - 2rem);
+  display: flex;
+  align-items: center;
+
+  .middle {
+    width: 100%;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    .high-light {
+      color: #12ffff;
+    }
+  }
+
+  .projects {
+    display: grid;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    @media(max-width: 50rem) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media(max-width: 35rem) {
+      grid-template-columns: 1fr;
+    }
+
+    .project {
+      border: 1px solid #fff;
+      height: 13rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      position: relative;
+
+      .info {
+        background-color: #12ffff55;
+        padding: 1rem;
+        text-shadow: 0 0 .25rem #223;
+        text-align: center;
+        background-image: linear-gradient(to bottom, transparent, #12ffff);
+        height: 100%;
+        position: relative;
+        bottom: -100%;
+        transition-duration: .3s;
+
+        .title {
+          font-size: 2rem;
+          height: 2rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
+
+        .description {
+          height: 5rem;
+          font-size: 1rem;
+          line-height: 1rem;
+          margin-top: 1rem;
+          overflow: hidden;
+        }
+
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          margin-bottom: 1rem;
+
+          .project-link,
+          .project-link:visited {
+            text-decoration: none;
+            background-color: #222233dd;
+            border-radius: 1.2rem;
+            padding: .5rem 3rem;
+            color: #fff;
+            font-weight: bold;
+          }
+
+          .project-link:hover {
+            background-color: #222233;
+            box-shadow: .1rem .1rem .3rem .1rem #223;
+
+          }
+        }
+      }
+
+      .info *::selection {
+        color: #223;
+      }
+
+      &:hover .info {
+        bottom: 0;
+      }
+    }
+
+  }
+}

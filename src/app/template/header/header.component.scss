@@ -70,6 +70,7 @@
         display: block;
         width: calc(100% - 3rem);
         position: absolute;
+        z-index: 99;
         top: 100%;
         right: 0;
         box-shadow: -3px 6px 6px #000;;
