@@ -1,0 +1,83 @@
+.project-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-description {
+  max-width: 50rem;
+  text-align: justify;
+  font-size: 1.5rem;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+.used-tech {
+  max-width: 50rem;
+  margin: auto;
+  padding-bottom: 2rem;
+
+  .item {
+    display: inline-block;
+    border: .1rem solid #fff;
+    font-size: .8rem;
+    line-height: 1rem;
+    height: 2rem;
+    padding: .5rem 2rem;
+    margin: .5rem .5rem;
+    border-radius: 1rem;
+    cursor: default;
+
+    &:hover {
+      border-color: #223;
+      color: #223;
+      background-color: #fff;
+    }
+  }
+}
+
+.project-links {
+  padding-bottom: 2rem;
+  max-width: 50rem;
+  margin: auto;
+
+  .project-link {
+
+    a,
+    a:visited {
+      color: #fff;
+    }
+  }
+}
+
+
+.carousel {
+
+  .carousel-inner {
+    background-image: linear-gradient(to right, transparent, #aaa, transparent);
+
+    .carousel-item {
+      height: 30rem;
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+
+      img {
+        margin: auto;
+        height: 100%;
+        max-width: fit-content;
+      }
+    }
+  }
+
+  .carousel-indicators [data-bs-target] {
+    box-shadow: 0 0 .5rem .1rem #223;
+    border: none;
+    height: .7rem;
+    border-radius: .35rem;
+  }
+
+  .carousel-indicators [data-bs-target].active {
+    background-color: #12ffff;
+  }
+}

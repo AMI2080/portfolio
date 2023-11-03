@@ -1,1 +1,51 @@
-<p>project works!</p>
+<h2 class="project-title">{{ project.title }}</h2>
+
+<div id="screenshoots-carousel" class="carousel slide" data-bs-ride="carousel" *ngIf="project.images && project.images.length > 0">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#screenshoots-carousel"
+      *ngFor="let screenshoot of project.images; let imgI = index"
+      [ngClass]="{active: imgI === 0}"
+      [attr.data-bs-slide-to]="imgI"
+      [attr.aria-current]="imgI === 0"
+      attr.aria-label="Slide {{imgI}}"
+      ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let screenshoot of project.images; let imgI = index"
+      [ngClass]="{active: imgI === 0}">
+      <img [src]="screenshoot.url" class="d-block w-100" [alt]="screenshoot.title">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#screenshoots-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#screenshoots-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<p class="project-description">
+  <b>Description:</b>
+  {{ project.shortDescription }}
+</p>
+
+<div class="used-tech" *ngIf="project.tech && project.tech.length > 0">
+  <h4>Used technologies:</h4>
+  <span class="item" *ngFor="let tech of project.tech">{{ tech }}</span>
+</div>
+
+<div class="project-links" *ngIf="project.links && project.links.length > 0">
+  <h4>Links:</h4>
+  <div class="project-link" *ngFor="let link of project.links">
+    <b>
+      {{ link.name }}:
+    </b>
+    <a [href]="link.href">
+      {{ link.title }}
+    </a>
+  </div>
+</div>

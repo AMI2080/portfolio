@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Project } from 'src/app/models/project.model';
@@ -9,7 +9,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent implements OnInit, OnDestroy {
+export class ProjectComponent implements OnDestroy {
 
   projectId: number;
 
@@ -17,9 +17,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   projectSubscription: Subscription;
 
-  constructor(private projectsService: ProjectsService, private router: Router, private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
+  constructor(private projectsService: ProjectsService, private router: Router, private route: ActivatedRoute) {
     this.projectSubscription = this.route.params.subscribe((params: Params) => {
       this.projectId = +params['id'];
       this.project = this.projectsService.getProject(this.projectId);
