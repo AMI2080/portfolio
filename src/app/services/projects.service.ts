@@ -16,7 +16,7 @@ export class ProjectsService {
         { url: 'assets/img/lab-3.jpg' },
         { url: 'assets/img/lab-4.jpg' },
       ],
-      tech: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'JQuery', 'PHP', 'Laravel', 'MySQL', 'Rest API'],
+      tech: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'JQuery', 'Rest API'],
     }, {
       title: 'Internet M.S.',
       imagePath: 'assets/img/internet-4.jpg',
@@ -27,7 +27,7 @@ export class ProjectsService {
         { url: 'assets/img/internet-3.jpg' },
         { url: 'assets/img/internet-4.jpg' },
       ],
-      tech: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'JQuery', 'PHP', 'Laravel', 'MySQL', 'Rest API'],
+      tech: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'JQuery', 'Rest API'],
     }, {
       title: 'YouTube Clone',
       imagePath: 'assets/img/youtube-clone-1.jpg',
